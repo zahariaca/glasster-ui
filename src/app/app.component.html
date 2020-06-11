@@ -1,22 +1,14 @@
-<header class="masthead">
+<div class="masthead">
   <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-lg-7 my-auto">
-        <div class="header-content mx-auto">
-          <div class="row">
-            <h1 class="mb-5">Glasster-UI</h1>
-          </div>
-          <div class="row">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="TODO" aria-label="TODO"
-                aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">TODO</button>
-              </div>
-            </div>
-          </div>
+    <div class="h-75 row align-items-center">
+      <div class="d-flex flex-column">
+        <div class="p-2 pl-5">
+          <h1 class="mb-5">Glasster-UI</h1>
+        </div>
+        <div class="p-2 pl-5" style="width: 200%;">
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   </div>
-</header>
+</div>
