@@ -52,6 +52,7 @@
 .btn-outline-secondary,
 .btn-outline-secondary[disabled] {
     background-color: white;
+    color: gray;
 }
 
 .btn-outline-secondary:hover,
@@ -62,8 +63,10 @@
     background-color: #fdcc52;
 }
 
-.btn-outline-secondary:hover[disabled],
-.btn-outline-secondary:focus[disabled],
-.btn-outline-secondary:active[disabled] {
-    color: white;
+.btn-outline-secondary[disabled]:hover,
+.btn-outline-secondary[disabled]:focus,
+.btn-outline-secondary[disabled]:active {
+    color: gray;
+    border-color: white;
+    background-color: white;
 }
