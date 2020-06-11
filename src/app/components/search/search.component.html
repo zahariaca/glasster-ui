@@ -1,15 +1,4 @@
-<!-- <div class="input-group mb-3">
-    <input #myInput type="url" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="basic-addon2"
-        (keyup.enter)="doSearch(myInput.value)">
-    <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" (click)="doSearch(myInput.value)">TODO</button>
-    </div>
-
-
-</div>
- -->
 <form [formGroup]="form" (ngSubmit)="submit()">
-
     <div class="input-group">
         <input formControlName="url" class="form-control" placeholder="URL" aria-label="URL"
             aria-describedby="basic-addon2">
@@ -18,7 +7,7 @@
             <button class="btn btn-outline-secondary" type="submit" [disabled]="!form.valid">Submit</button>
         </div>
     </div>
-    <div *ngIf="f.url.touched && f.url.invalid" class="alert alert-danger">
+    <div *ngIf="f.url.touched && f.url.invalid" class="alert alert-secondary" role="alert">
         <div *ngIf="f.url.errors.required">URL is required.</div>
         <div *ngIf="f.url.errors.pattern">Please enter valid url.</div>
     </div>
