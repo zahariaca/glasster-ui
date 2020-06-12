@@ -8,6 +8,6 @@ export class UrlService {
   constructor() { }
 
   todo(urlValue) {
-    console.log("UrlService-- " + urlValue)
+    console.log('UrlService-- ' + urlValue);
   }
 }

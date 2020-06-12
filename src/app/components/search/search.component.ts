@@ -12,11 +12,11 @@ export class SearchComponent implements OnInit {
   form: FormGroup = new FormGroup({});
 
   constructor(private fb: FormBuilder,
-    private urlService: UrlService) {
+              private urlService: UrlService) {
     const reg = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
     this.form = fb.group({
       url: ['', [Validators.required, Validators.pattern(reg)]]
-    })
+    });
   }
 
   get f() {
@@ -27,7 +27,7 @@ export class SearchComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.form.value.url)
-    this.urlService.todo(this.form.value.url)
+    console.log(this.form.value.url);
+    this.urlService.todo(this.form.value.url);
   }
 }
