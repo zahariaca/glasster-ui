@@ -1,0 +1,15 @@
+/* bootstrap override */
+.btn-outline-dark,
+.btn-outline-dark[disabled] {
+    background-color: rgba(255, 255, 255, 0);;
+    border: 0;
+    color: white;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+    color: white;
+    border-bottom: 1px solid #fdcc52;
+    border-bottom-width: thin;
+}

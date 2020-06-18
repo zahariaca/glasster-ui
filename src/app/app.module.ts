@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormModalComponent } from './components/form-modal/form-modal.component';
 
 const routes: Routes = [
   { path: 'search', component: SearchComponent },
@@ -17,13 +17,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    FormModalComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
     NgbModule,
-    FontAwesomeModule,
     ReactiveFormsModule
   ],
   providers: [],
