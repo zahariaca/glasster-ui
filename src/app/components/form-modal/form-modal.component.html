@@ -1,7 +1,6 @@
 <div class="modal-header">
-    <i class="far fa-window-close"></i>
     <h4 class="modal-title">My Form</h4>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"><mat-icon color="primary">close</mat-icon></button>
 </div>
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
     <div class="modal-boy">
