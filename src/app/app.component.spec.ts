@@ -3,6 +3,11 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +16,13 @@ describe('AppComponent', () => {
         AppComponent,
         SearchComponent
       ],
-      imports: [ReactiveFormsModule],
+      imports: [
+        NgbModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        HttpClientModule
+      ],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
@@ -26,12 +37,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('glasster-ui');
-  });
-
-  it('should render h1', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.masthead h1').textContent).toContain('Glasster-UI');
   });
 });

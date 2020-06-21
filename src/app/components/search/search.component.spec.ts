@@ -24,4 +24,11 @@ describe('SearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render h1', () => {
+    const fixture = TestBed.createComponent(SearchComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.masthead h1').textContent).toContain('Glasster-UI');
+  });
 });
