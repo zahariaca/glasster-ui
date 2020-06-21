@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
   invalidLogin = false;
 
   constructor(private modalService: NgbModal,
-    private authService: AuthenticationService,
-    private router: Router) { }
+              private authService: AuthenticationService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }

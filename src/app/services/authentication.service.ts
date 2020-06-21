@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../common/user';
-import { map } from 'rxjs/operators'
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -16,20 +16,20 @@ export class AuthenticationService {
     return this.httpClient.get<User>('http://localhost:8080/validateLogin', { headers }).pipe(
       map(
         userData => {
-          console.log('++authenticate: ' + userData.status)
-          sessionStorage.setItem('username', username)
-          return userData
+          console.log('++authenticate: ' + userData.status);
+          sessionStorage.setItem('username', username);
+          return userData;
         }
       )
-    )
+    );
   }
 
   isUserLoggedIn() {
-    let user = sessionStorage.getItem('username');
-    return !(user === null)
+    const user = sessionStorage.getItem('username');
+    return !(user === null);
   }
 
   logOut() {
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('username');
   }
 }

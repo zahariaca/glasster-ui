@@ -12,11 +12,11 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class LoginModalComponent implements OnInit {
   @Input() id: number;
   myForm: FormGroup;
-  public invalidLogin = false
+  public invalidLogin = false;
 
   constructor(public activeModal: NgbActiveModal,
-    private formBuilder: FormBuilder,
-    private authService: AuthenticationService) {
+              private formBuilder: FormBuilder,
+              private authService: AuthenticationService) {
     this.createForm();
   }
 
@@ -37,14 +37,14 @@ export class LoginModalComponent implements OnInit {
   submitForm() {
     this.authService.authenticate(this.myForm.value.username, this.myForm.value.password).subscribe(
       data => {
-        console.log(`++submitForm data: ${JSON.stringify(data)}`)
+        console.log(`++submitForm data: ${JSON.stringify(data)}`);
         this.invalidLogin = false;
         this.activeModal.close(this.myForm.value);
       },
       error => {
-        console.log(`++submitForm error: ${JSON.stringify(error)}`)
+        console.log(`++submitForm error: ${JSON.stringify(error)}`);
         this.invalidLogin = true;
       }
-    )
+    );
   }
 }

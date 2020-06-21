@@ -26,9 +26,9 @@ describe('SearchComponent', () => {
   });
 
   it('should render h1', () => {
-    const fixture = TestBed.createComponent(SearchComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
+    const f = TestBed.createComponent(SearchComponent);
+    f.detectChanges();
+    const compiled = f.nativeElement;
     expect(compiled.querySelector('.masthead h1').textContent).toContain('Glasster-UI');
   });
 });
